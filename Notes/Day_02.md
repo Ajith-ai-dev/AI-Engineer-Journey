@@ -64,8 +64,7 @@
     - bool
 
     Ex:
-       name = "Arjun"
-
+       name = "Arjun"\
        name = "Krishna"
 
     Python creates a new string object 'Krishna' instead of overriding Arjun, this rebinds the name with the new string object.
@@ -85,8 +84,7 @@
     In Mutation, the existing objects changes and no new object gets created.
 
     Ex:
-        a = 10
-
+        a = 10\
         a = 100
 
         This is rebinding and new object 100 gets created.
@@ -126,13 +124,13 @@
         In case of list, mutating of one reference affects others because all the variables point to the same object.
 
 # Engineer Mode(Why?):
-1. Why lists are mutable?
+1. Why lists are mutable?  
    Lists are designed to be updated frequently. Mutability avoids creating new list whenever an element is added or removed, this improves efficiency for dynamic collections.
 
-2. Why strings are immutable?
-   Strings are widely shared throughout programs. Immutability prevents accidental modifications, making programs more predictable, safer, and easier to maintain or reason.
+2. Why strings are immutable?  
+    Strings are widely shared throughout programs. Immutability prevents accidental modifications, making programs more predictable, safer, and easier to maintain or reason.
 
-3. Why Python provide "==" and "is", if both are used for comparision?
+3. Why Python provide "==" and "is", if both are used for comparision?\
    - "==" compares the actual contents of the object (compares object itself)
    - "is" compares the location that the object is pointing to.
    - The main difference is that:
@@ -155,6 +153,5 @@
     id(a)             #Object Identity 
     
 # Simplied explanation:
-1. What is an object in Python?
-
+1. What is an object in Python?\
     An object is a piece of data created by Python. Variables don't store the data itself; they refer to objects that hold the data.

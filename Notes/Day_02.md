@@ -130,7 +130,7 @@
 2. Why strings are immutable?  
     Strings are widely shared throughout programs. Immutability prevents accidental modifications, making programs more predictable, safer, and easier to maintain or reason.
 
-3. Why Python provide "==" and "is", if both are used for comparision?\
+3. Why Python provide "==" and "is", if both are used for comparision?
    - "==" compares the actual contents of the object (compares object itself)
    - "is" compares the location that the object is pointing to.
    - The main difference is that:

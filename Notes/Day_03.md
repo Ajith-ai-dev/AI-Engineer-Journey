@@ -40,3 +40,144 @@
 
     Here,
           greet --> <function object>
+### 3. Function Objects:
+    Functions are objects in Python.
+    They can be:
+    - Assigned to variables
+    - Passed to other functions
+    - Returned from functions
+
+    Ex:
+        welcome = greet
+        
+        Both refer to the same function object  
+
+        greet   --> <function_object>
+        welcome --> <same function_object>
+
+### 4. Function call:
+    Simply refering a function is different from executing it.
+
+    greet   --> refer to the function object
+
+    greet() --> The parenthesis '()' tell Python to execute the function object.
+
+### 5. Parameters:
+    Parameters are local variables defined in a function that receives objects passed by the caller.
+
+    Ex:
+        def greet(name):
+            print("Hello", name)
+
+        Here, 'name' is a parameter.  
+
+### 6. Arguments:
+    Arguments are the actual objects supplied when calling a function.
+
+    Ex: 
+        def greet(name):
+            print("Hello", name)
+
+        greet("Krishna")
+
+        Here, 
+        "Krishna" --> Argument
+        name      --> Parameter
+
+### 7. Local variables:
+    Local variables are the variables that include:
+    - Parameters 
+    - Variables created inside the function body  
+
+    Ex:
+        def calculate(price, tax):
+            total = price + tax
+            return total
+
+        Here, 
+        "price" and "tax"          --> Parameters
+        "price", "tax" and "total" --> Local Variables         
+
+### 8. Parameter Passing:
+    When calling a function, Python does not pass the caller's variable. 
+    Instead,
+        - A new local parameter variable is created
+        - The parameter refers to the same object as the caller's variable
+
+    *** Here, only the object reference is shared not the actual variable
+
+    Ex:
+        def greet(name):
+            print("Hello", name)
+
+        user = "Krishna"
+        greet(user)
+
+        Here, 
+            user --> Krishna
+            name --> Krishna            
+        - Only reference gets passed and both variables refer to same object.
+
+### 9. Mutation:
+    Mutation changes the existing object's contents
+
+    Ex:
+        numbers = [1, 2, 3]
+        numbers.append(4)
+
+        Result:
+            [1, 2, 3, 4]
+
+    - The existing list object itself is modified and no new list object gets created.
+
+### 10. Rebinding:
+    Rebinding changes which object a variable refers to. 
+
+    Ex:
+        def modify(data):
+            data = [100]
+
+        numbers = [1, 2, 3]
+        modify(numbers)
+
+        Here, 
+            Before calling the function:
+                numbers --> [1, 2, 3]
+            After entering the function:
+                numbers --> [1, 2, 3] <-- data
+            After executing:
+                numbers --> [1, 2, 3]
+                data    --> [100]
+
+        - Only the local parameter "data" gets rebound.
+        - The variable "numbers" continues to refer to the original list object.
+### 11. Return Statement:
+    The return statement sends an object back to the caller.
+
+    Ex:
+        def add(a, b):
+            return a + b
+
+        The function returns the computed object.
+
+### 12. Return Value:
+    A function can return any Python Object.
+    - Integer
+    - Float
+    - String
+    - List
+    - Dictionary
+    - Function
+    - Class Object
+
+    Ex:
+        result = add(10, 20)
+
+        result --> 30
+        
+        The variable becomes bound to the returned object
+
+            
+
+
+

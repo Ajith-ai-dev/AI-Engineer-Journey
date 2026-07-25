@@ -209,6 +209,37 @@
 
         - Here, the function object referred by greet is passed as an argument without executed immediatley.
 
+# Engineer Mode(Why?):
+1. Why do functions exist?
+    Functions are designed to:
+    - Reuse code
+    - Improve maintainability
+    - Reduce duplication
+    - Simpler debugging and testing
+
+    Large applications become difficult to maintain without functions.
+
+2. Why functions are objects in Python?
+    Treating functions as objects makes Python flexible.
+    It allows developers to:
+    - Pass functions as arguments
+    - Return functions
+    - Store functions in variables
+
+    Modern AI frameworks such as FastAPI, LangChain, and PyTorch rely heavily on this capability.
+
+3. Why does Python pass object references instead of copying objects     ?
+    Copying large objects every a function is called would consume significant memory and reduce performance.
+    Passing references allows Python to work efficiently with:
+    - Large dataset
+    - Machine Learning models
+    - Neural network parameters
+
+4. Why does rebinding inside the function does not affect the caller?
+    Rebinding changes only the local parameter's reference.
+    The caller's variable is a different variable that still refers to the original object
+
+    
         
 
 

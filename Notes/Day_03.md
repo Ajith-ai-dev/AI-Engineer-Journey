@@ -177,7 +177,39 @@
         
         The variable becomes bound to the returned object
 
-            
+### 13. None:
+    If the function does not have an explicit return statement, Python automatically returns the special object 'None'.
+
+    Ex:
+        def greet():
+            print("Hello")
+
+        Here,
+        greet() --> returns None
+
+    - None is a real Python Object
+
+### 14. First-Class Functions:
+    Python treats functions as first-class objects. This means function can be used like any other object.
+
+    They can be:
+    - Assigned to variables
+    - Passed as arguments
+    - Returned from other functions
+    - Stored in collections such as lists and dictionaries
+
+    Ex:
+        def greet():
+            print("Hello")
+
+        def execute(task):
+            task()
+        
+        execute(greet)
+
+        - Here, the function object referred by greet is passed as an argument without executed immediatley.
+
+        
 
 
 

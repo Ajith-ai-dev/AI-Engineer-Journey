@@ -210,7 +210,7 @@
         - Here, the function object referred by greet is passed as an argument without executed immediatley.
 
 # Engineer Mode(Why?):
-1. Why do functions exist?
+1. Why do functions exist?  
     Functions are designed to:
     - Reuse code
     - Improve maintainability
@@ -219,7 +219,7 @@
 
     Large applications become difficult to maintain without functions.
 
-2. Why functions are objects in Python?
+2. Why functions are objects in Python?  
     Treating functions as objects makes Python flexible.
     It allows developers to:
     - Pass functions as arguments
@@ -228,18 +228,52 @@
 
     Modern AI frameworks such as FastAPI, LangChain, and PyTorch rely heavily on this capability.
 
-3. Why does Python pass object references instead of copying objects     ?
+3. Why does Python pass object references instead of copying objects?  
     Copying large objects every a function is called would consume significant memory and reduce performance.
     Passing references allows Python to work efficiently with:
     - Large dataset
     - Machine Learning models
     - Neural network parameters
 
-4. Why does rebinding inside the function does not affect the caller?
+4. Why does rebinding inside the function does not affect the caller?  
     Rebinding changes only the local parameter's reference.
     The caller's variable is a different variable that still refers to the original object
 
+5. Why does Python return None automatically?  
+    Python maintains a consistent object model.
     
+    Every function call returns an object. If no object is explicitly returned, Python returns the special object None.
+
+    This avoids special cases and keeps the language consistent.
+
+### Simplied Explanation:
+1. What is a function?  
+    A function is a reusable block of code that performs a specific task.
+
+2. What is a function object?  
+    A function is an object created in Python. The function name simply refers to that object.
+
+3. What is the difference between greet and greet()?  
+    - greet   --> refers to the function object    
+    - greet() --> executes the function object
+
+4. What are parameters and arguments?  
+    - Parameters are local variables inside a function    
+    - Arguments are the actual objects passed to the function  
+    
+    Parameters are variables declared in the function definition that receive the arguments when the function is called.
+
+5. What happens when a list is passed to a function?  
+    The function receives a new local variable that refers to the same list object.
+    - Mutating the list affects the caller
+    - Rebinding the parameter does not
+
+6. What does return do?  
+    The return statement sends an object back to the caller.
+
+7. What happens if no return statement is used?  
+    Python automatically returns a special object None.    
+
         
 
 

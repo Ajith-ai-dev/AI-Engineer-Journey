@@ -153,5 +153,5 @@
     id(a)             #Object Identity 
     
 # Simplied explanation:
-1. What is an object in Python?\
+1. What is an object in Python?  
     An object is a piece of data created by Python. Variables don't store the data itself; they refer to objects that hold the data.

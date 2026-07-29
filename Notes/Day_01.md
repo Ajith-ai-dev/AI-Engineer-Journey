@@ -1,9 +1,9 @@
 # Topics Covered
-- 1. What is SDK(Software Development Kit)?
-- 2. Why Python is widely used than C++ even though the latter being the fastest?
-- 3. How to create and run a Python program?
-- 4. What is the difference between = and ==?
-- 5. What does print() do?
+1. What is SDK(Software Development Kit)?
+2. Why Python is widely used than C++ even though the latter being the fastest?
+3. How to create and run a Python program?
+4. What is the difference between = and ==?
+5. What does print() do?
 
 # Explanations
 1. SDK (Software Development Kit) is a collection of tools, libraries, documentation, and sample code that help the developers in developing  software applications.
@@ -49,17 +49,18 @@
 5. Function: A reusable block of code that performs a specific task
 
 # Code Snippets
-1. name = "Hari"
+1. name = "Hari"  
    print(name)
 2. age = 10
-   print(age)       -- 10
-   print(age == 10) -- True
+   print(age)       -- 10  
+   print(age == 10) -- True  
    print(age = 10)  -- Syntax error
 3. a = 10
    b = 20
    a = b
    b = 30
-   print(a) -- 20, comparison operator will not re-assign the value to the variable it just evaluates the expression
+   print(a) -- 20, 
+   comparison operator will not re-assign the value to the variable it just evaluates the expression
 
 # Improvements and suggestions
 1. Always be consistent in using quotes use "" or '', do not use '' in one place and "" in another even though both are correct.

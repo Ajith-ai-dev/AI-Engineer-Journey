@@ -28,13 +28,13 @@
 5. print() in Python, is a built-in function that displays value in the console.
 
 # Key Concepts
-1. Variable : A name used to refer a value so that we can use or modify it later in the program. Basically a container used to    store values
+1. Variable : A name used to refer a value so that we can use or modify it later in the program.    Basically a container used to store values
     - Ex:
-    name = "Krishna"
+    name = "Krishna"  
     Here, name is the variable and it refers to the string object 'Krishna'
 
-2. '=' : Assignment Operator, used to assign values to variable
-3. '==' : Comparison Operator, used to compares values, it always return either True or False
+2. '='     : Assignment Operator, used to assign values to variable
+3. '=='    : Comparison Operator, used to compares values, it always return either True or False
 4. print() : A built-in function that is used to display values to the console
 
 # Doubts and responses
@@ -43,23 +43,25 @@
 
 # Technical Vocabulary
 1. Repository: A Git Project
-2. Branch: An independent line of development in a repo
+2. Branch    : An independent line of development in a repo
 3. Expression: Code that evaluates to a value
-4. Statement: An instruction executed by Python
-5. Function: A reusable block of code that performs a specific task
+4. Statement : An instruction executed by Python
+5. Function  : A reusable block of code that performs a specific task
 
 # Code Snippets
 1. name = "Hari"  
    print(name)
-2. age = 10
+
+2. age = 10  
    print(age)       -- 10  
    print(age == 10) -- True  
    print(age = 10)  -- Syntax error
-3. a = 10
-   b = 20
-   a = b
-   b = 30
-   print(a) -- 20, 
+
+3. a = 10  
+   b = 20  
+   a = b  
+   b = 30  
+   print(a) -- 20,  
    comparison operator will not re-assign the value to the variable it just evaluates the expression
 
 # Improvements and suggestions

@@ -21,4 +21,14 @@
 
 # Key concepts 
 1. Multiple parameters:  
-   A function can define multiple parameters to    receive multiple objects from the caller.
+   A function can define multiple parameters to    receive multiple objects from the caller.  
+  Ex:  
+     def add(a, b):
+     return a + b
+  Here, 
+     - a, b are parameters 
+     - Both are local variables bound to the supplied objects
+
+2. Positional arguments:  
+   Positional arguments are
+      

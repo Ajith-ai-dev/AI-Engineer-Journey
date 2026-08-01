@@ -1,5 +1,5 @@
-# Topics covered and Technical Vocabulary  
-1. Multiple paraeters 
+# Topics covered and Technical vocabulary  
+1. Multiple parameters 
 2. Positional arguments 
 3. Keyword arguments 
 4. Mixing positional and keyword arguments
@@ -8,12 +8,12 @@
 7. Function signature
 8. Optional parameters 
 9. Required parmeters 
-10. Variale positional arguments(*args)
+10. Variable positional arguments(*args)
 11. Variable keyword arguments(**kwargs)
 12. Tuple
 13. Dictionary 
 14. Mutable default parameters
-15. API desgn 
+15. API design 
 16. Backward compatibility 
 17. Configuration
 18. Validation

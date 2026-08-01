@@ -19,6 +19,6 @@
 18. Validation
 19. Normalization
 
-#Key concepts 
-1. Multiple parameters:
+# Key concepts 
+1. Multiple parameters:  
    A function can define multiple parameters to    receive multiple objects from the caller.

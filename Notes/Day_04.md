@@ -7,7 +7,7 @@
 6. Default parameter values
 7. Function signature
 8. Optional parameters 
-9. Required parmeters 
+9. Required parameters 
 10. Variable positional arguments(*args)
 11. Variable keyword arguments(**kwargs)
 12. Tuple
@@ -18,3 +18,7 @@
 17. Configuration
 18. Validation
 19. Normalization
+
+#Key concepts 
+1. Multiple parameters:
+   A function can define multiple parameters to    receive multiple objects from the caller.

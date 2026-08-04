@@ -30,5 +30,18 @@
      - Both are local variables bound to the supplied objects
 
 2. Positional arguments:  
-   Positional arguments are
+   Positional arguments are bound to parameters based on their position.  
+   Ex:  
+      def introduce(name, age):
+         print(name, age)
+
+      introduce("Ajith", 29)
+
+      Here, 
+      Ajith  --> bound to parameter 'name'
+      29     --> bound to parameter 'age'
+
+   - Python processes positional arguments from left to right.
+
+3. Keyword arguments:   
       

@@ -31,7 +31,7 @@
 
 ### 2. Positional arguments:  
     Positional arguments are bound to parameters based on their position.  
-   Ex:  
+    Ex:  
       def introduce(name, age):  
          print(name, age)
 
@@ -41,78 +41,71 @@
       - Ajith  --> bound to parameter 'name'
       - 29     --> bound to parameter 'age'
 
-   - Python processes positional arguments from left to right.
+    - Python processes positional arguments from left to right.
 
 ### 3. Keyword Arguments:  
     Keyword arguments are bound using the parameter name instead of position.  
-
-   Ex:  
-     introduce(age = 23, name = "Ajith")
+    Ex:  
+      introduce(age = 23, name = "Ajith")
 
    Here,  
     - name is bound to "Ajith"  
     - age is bound to 23
 
-   - Order doesn't matter because binding is based on parameter names.
+    - Order doesn't matter because binding is based on parameter names.
 
 ### 4. Mixing Positional and Keyword Arguments:  
     Python allows positional and keyword arguments to be used together.  
+    Ex:  
+      introduce("Ajith", age = 24)
 
-   Ex:  
-     introduce("Ajith", age = 24)
+    Binding occurs as follows:  
+    - Positional arguments are bound first
+    - Remaining keyword arguments are matched by parameter name.
 
-   Binding occurs as follows:  
-   - Positional arguments are bound first
-   - Remaining keyword arguments are matched by parameter name.
-
-   * Positional arguments cannot appear after keyword arguments.
+    * Positional arguments cannot appear after keyword arguments.
 
 ### 5. Default Parameters:  
     Default parameters provide predefined objects when the caller does not supply an argument.  
-
-   Ex,  
+    Ex:  
       def greet(name, message = "Hello"):  
          print(message, name)
 
-   Here, 
-   - message defaults to "Hello" if not supplied
-   - Passing another value overrides the default
+    Here, 
+    - message defaults to "Hello" if not supplied
+    - Passing another value overrides the default
 
 ### 6. Function Signature:  
     Function signature defines how a function should be called.  
-   It consists of:  
+    It consists of:  
       - Function name
       - Parameters
       - Default values
       - *args
       - **kwargs  
 
-   The signature forms the public interface of a function.
+    The signature forms the public interface of a function.
 
 ### 7. Optional Parameters:
     Parameters with default values become optional parameters.  
-
-   Ex:  
+    Ex:  
       def connect(host, port = 8080):  
          ......  
          ......
-
-   Here,  
-   - port becomes optional parameter and the caller can omit it.  
+    Here,  
+    - port becomes optional parameter and the caller can omit it.  
 
 ### 8. Required Parameters:  
     Parameters without default values are required.  
-
-   Ex,  
+    Ex:  
       def check_access(user, password):  
          print("Access granted")      
 
-   - Both arguments must be supplied.
+    - Both arguments must be supplied.
 
 ### 9. Variable Positional Arguments(*args):  
     *args collects a variable number of positional arguments into a single tuple object.  
-
-   Ex,  
+    Ex:
       def total(*args):  
          result = 0 
 
@@ -123,10 +116,9 @@
 
       print(total(10, 20))
       print(total(10, 30, 20))
-
-   Here,  
-   - All positional arguments are collected into one tuple.
-   - The parameter "args" is bound to that tuple.  
+    Here,  
+    - All positional arguments are collected into one tuple.
+    - The parameter "args" is bound to that tuple.  
 
 ### 10. Tuple in *args:  
     Python stores *args as a tuple because:  
@@ -137,7 +129,6 @@
 
 ### 11. Variable Keyword Arguments(**kwargs):  
     **kwargs collects a variable number of keyword arguments into one dictionary.  
-
     Ex:  
        def configure(**kwargs):
          print(kwargs)
@@ -157,9 +148,8 @@
          )
 
       print(config)
-
-   Here, 
-   - The call:  
+    Here, 
+    - The call:  
       config = configure(  
          model="gpt-4",  
          temperature=0.2  
@@ -167,7 +157,7 @@
 
       Creates a new dictionary for this function call:
    
-   - Then,  
+    - Then,  
       kwargs = {  
          "model": "gpt-4",  
          "temperature": 0.2  
@@ -179,15 +169,15 @@
 
       - adds a new key because timeout is not supplied
    
-   - The final dictionary becomes:  
+    - The final dictionary becomes:  
       {  
       "model": "gpt-4",  
       "temperature": 0.2,  
       "timeout": 30  
       }
    
-   - Every keyword becomes a dictionary key
-   - Every supplied object becomes it's associated value.
+    - Every keyword becomes a dictionary key
+    - Every supplied object becomes it's associated value.
 
 ### 12. Dictionary in **kwargs:  
     Python generally stores **kwargs in a dictionary becomes keyword arguments naturally represent key-value mappings.
@@ -226,7 +216,6 @@
 
     If the default object is mutable then:
     - The same list object is reused across function calls.
-    
     Ex:  
       def add_item(items=[]):      
          items.append("Apple")
@@ -240,13 +229,12 @@
       ["Apple"]
       ["Apple", "Apple"]
       ["Apple", "Apple", "Apple"]
-
-   - Why it gives the above output instead of:  
+    - Why it gives the above output instead of:  
       ["Apple"]  
       ["Apple"]  
       ["Apple"]
 
-   - Because, the function is evaluated only once, when the function is called it executes the function body, so in case of mutable objects, the default object gets overriden.
+    - Because, the function is evaluated only once, when the function is called it executes the function body, so in case of mutable objects, the default object gets overriden.
 
 ### 15. API design:  
     Python's parameter system is designed to create and maintain flexible APIs.

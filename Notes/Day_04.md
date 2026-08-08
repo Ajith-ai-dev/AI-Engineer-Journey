@@ -21,17 +21,17 @@
 
 # Key Concepts 
 ### 1. Multiple Parameters:  
-    A function can define multiple parameters to    receive multiple objects from the caller.  
-   Ex,  
-     def add(a, b):  
+    A function can define multiple parameters to receive multiple objects from the caller.  
+    Ex:  
+      def add(a, b):  
          return a + b  
-   Here, 
-   - a, b are parameters 
-   - Both are local variables bound to the supplied objects
+    Here, 
+    - a, b are parameters 
+    - Both are local variables bound to the supplied objects
 
 ### 2. Positional arguments:  
     Positional arguments are bound to parameters based on their position.  
-   Ex,  
+   Ex:  
       def introduce(name, age):  
          print(name, age)
 
@@ -46,20 +46,20 @@
 ### 3. Keyword Arguments:  
     Keyword arguments are bound using the parameter name instead of position.  
 
-   Ex,  
-      introduce(age = 23, name = "Ajith")
+   Ex:  
+     introduce(age = 23, name = "Ajith")
 
    Here,  
-   - name is bound to "Ajith"  
-   - age is bound to 23
+    - name is bound to "Ajith"  
+    - age is bound to 23
 
    - Order doesn't matter because binding is based on parameter names.
 
 ### 4. Mixing Positional and Keyword Arguments:  
     Python allows positional and keyword arguments to be used together.  
 
-   Ex,  
-      introduce("Ajith", age = 24)
+   Ex:  
+     introduce("Ajith", age = 24)
 
    Binding occurs as follows:  
    - Positional arguments are bound first
@@ -241,7 +241,7 @@
       ["Apple", "Apple"]
       ["Apple", "Apple", "Apple"]
 
-   - Why it gives the above output instead of:
+   - Why it gives the above output instead of:  
       ["Apple"]  
       ["Apple"]  
       ["Apple"]

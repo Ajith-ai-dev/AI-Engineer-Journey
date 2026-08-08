@@ -247,45 +247,45 @@
 
 # Engineering Mode(Why?):
 1. Why positional arguments processed before keyword arguments?  
-   Python first binds positional arguments from left to right, then binds keyword arguments by parameter name. This avoids ambuigity and keeps argument binding deterministic.  
+    Python first binds positional arguments from left to right, then binds keyword arguments by parameter name. This avoids ambuigity and keeps argument binding deterministic.  
 
 2. Why do keyword argument exists?  
-   Keyword arguments improve readability, maintainability, and allow optional parameters to be supplied without depending on their position.  
+    Keyword arguments improve readability, maintainability, and allow optional parameters to be supplied without depending on their position.  
 
 3. Why are default parameters only evaluated once?  
-   Python creates the default object when it the function object is created, maintaining a consistent object model and avoiding repeated evaluation.
+    Python creates the default object when it the function object is created, maintaining a consistent object model and avoiding repeated evaluation.
 
 4. Why is *args stored as a tuple?  
-   Function arguments represent caller input and should not be accidentally modified. A tuple expresses fixed input through immutability.  
+    Function arguments represent caller input and should not be accidentally modified. A tuple expresses fixed input through immutability.  
 
 5. Why is **kwargs stored as a dictionary?   
-   Keyword arguments naturally form key-value mappings. A dictionary enables efficient lookup and allows frameworks to validate, normalize, enrich, and modify configuration within the current function call.  
+    Keyword arguments naturally form key-value mappings. A dictionary enables efficient lookup and allows frameworks to validate, normalize, enrich, and modify configuration within the current function call.  
 
 6. Why are dictionaries mutable while tuples are immutable?  
-   *args represent fixed positional input, whereas **kwargs represent configuration that often needs processing, such as adding defaults, modifying keys, or validating values.  
+    *args represent fixed positional input, whereas **kwargs represent configuration that often needs processing, such as adding defaults, modifying keys, or validating values.  
 
 # Simplified Explanation:
 
 1. What are positional arguments?  
-   Arguments that are matched to parameters based on their position
+    Arguments that are matched to parameters based on their position
 
 2. What are keyword arguments?  
-   Arguments that are matched to parameters based on their names.
+    Arguments that are matched to parameters based on their names.
 
 3. What are default parameters?  
-   Parameters that already have predefined objects if the caller does not provide one.  
+    Parameters that already have predefined objects if the caller does not provide one.  
 
 4. What is *args?  
-   A parameter that collects any number of positional arguments into a tuple.  
+    A parameter that collects any number of positional arguments into a tuple.  
 
 5. What is **kwargs?  
-   A parameter that collects any number of keyword arguments into a dictionary.  
+    A parameter that collects any number of keyword arguments into a dictionary.  
 
 6. Why is *args a tuple?  
-   Because positional arguments represents fixed input and should not be modified accidentally.  
+    Because positional arguments represents fixed input and should not be modified accidentally.  
 
 7. Why is **kwargs a dictionary?  
-   Because keyword arguments naturally represent key-value mapping and dictionary allows efficient configuration processing.
+    Because keyword arguments naturally represent key-value mapping and dictionary allows efficient configuration processing.
 
 8. Why is a mutable default parameter dangerous?  
-   Because the same mutable object is reused across multiple function calls, so mutation persist between call.  
+    Because the same mutable object is reused across multiple function calls, so mutation persist between call.  

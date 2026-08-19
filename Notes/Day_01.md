@@ -23,7 +23,7 @@
     - '=' represents assignment, it assigns the value on right-hand side to the variable on the left-hand side.
     - '==' represents comparison operation, it compares the values on both sides. 
         - If both are equal, it returns 'True'
-        - If both are not equal, it return 'False'
+        - If both are not equal, it returns 'False'
 
 5. print() in Python, is a built-in function that displays value in the console.
 
@@ -34,7 +34,7 @@
     Here, name is the variable and it refers to the string object 'Krishna'
 
 2. '='     : Assignment Operator, used to assign values to variable
-3. '=='    : Comparison Operator, used to compares values, it always return either True or False
+3. '=='    : Comparison Operator, used to compare values, it always returns either True or False
 4. print() : A built-in function that is used to display values to the console
 
 # Doubts and responses

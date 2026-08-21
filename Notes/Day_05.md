@@ -9,7 +9,7 @@
 
 2. Namespaces:  
     a. Namespace looking  
-    b. Name -> Binding -> Object
+    b. Name -> Binding -> Object  
     c. Variable Lifetime  
     d. Name resolution  
 
@@ -41,5 +41,32 @@
     d. Monitoring  
     e. Timing  
     f. Exception Handling  
-    g. try/finally  
+    g. try / finally  
+
+# Key Concepts
+### 1. Scope  
+    Scope determines where a name can be resolved.  
+    Python follows the LEBG rule  
+    L -> Local
+    E -> Enclosing  
+    B -> Built-In  
+    G -> Global  
+    Ex:  
+        message = "Global"  
+        def outer():  
+            message = "Enclosing"  
+
+            def inner():  
+                message = "Local"  
+                print(message)  
+            inner()  
+        
+        outer()  
+
+        output: 
+            Local  
+            
+        - Python finds message in the local namespace first and stops searching  
+        
+    
 

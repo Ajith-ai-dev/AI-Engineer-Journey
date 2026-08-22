@@ -67,6 +67,23 @@
             Local  
             
         - Python finds message in the local namespace first and stops searching  
+
+### 2. Namespaces:  
+    Namespace can be thought as a collection of name-to-object bindings.  
+    In Python, a namespace is like a box that keeps names (variables and functions) separate so that they don't clash.  
+
+    - A name is bound to an object inside a namespace.  
+
+### 3. Local Scope:  
+    Every function execution creates a local execution containing its local bindings. A name created inside a function normally belongs to that function's local scope. This provides isolation.  
+
+    Why?
+    - Because allowing every function to directly modify the same names would create unneccesary coupling and unpredictable side effects. Local scope therefore helps with:
+        a. Encapsulation
+        b. Isolation  
+        c. Maintainability  
+        d. Prevents accidental changes
+
         
     
 

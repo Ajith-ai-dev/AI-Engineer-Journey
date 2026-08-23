@@ -82,7 +82,26 @@
         a. Encapsulation
         b. Isolation  
         c. Maintainability  
-        d. Prevents accidental changes
+        d. Prevents accidental changes  
+
+### 4. Global Scope:  
+    Names defined at the module level belong to the global namespace of that module.  
+
+    Functions can read the global names when they don't have a matching local or enclosing binding.  
+
+    However, relying heavily on global mutable state can make software hard to reason about.
+
+    Engineering Insight:  
+        - Global state is not automatically bad, but unnecessary share mutable state increases coupling.  
+        - In production systems, configuration and state should generally have clearly defined ownership.  
+
+### 5. Enclosing Scope:  
+    An enclosing space exists when there are nested functions.  
+
+    If a function is defined inside another function, the outer function's namespace becomes the **enclosing namespace** for the inner function.  
+
+    This gives the inner function access to the named defined in the outer function. This mechanism is the foundation for closures.      
+
 
         
     

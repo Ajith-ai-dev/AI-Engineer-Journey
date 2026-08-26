@@ -164,6 +164,107 @@
         - Framework Internals  
 
 ### 10. Reading, Mutability and Rebinding in Closures:  
+    A Closure can access an enclosing binding.
+
+    Reading:  
+    Reading an enclosing name is allowed. The nested function simply retrieves the object associated with that binding.  
+
+    Mutation:  
+    If the binding refers to a mutatable object, the nested function can mutate that object.  
+    The binding itself remains unchanged.  
+    - Ex: adding an item to an existing list changes the list object, not the name-to-object relationship.  
+
+    Rebinding: 
+    Rebinding means changing the object a name refers to. In closures, to rebind inside a nested function, Python requires the keyword 'nonlocal'.  
+
+### 11. nonlocal:  
+    nonlocal is a keyword in Python. It tells Python that the name belongs to enclosing function scope.  
+    
+    This allows the nested function to rebind the existing variable instead of creating a new local variable. This is helpful in maintaining state inside closures.  
+
+    * Without nonlocal, Python assumes the name is a local variable and assigns the object reference.  
+
+    Ex:  
+        def outer():  
+            count = 0  
+
+            def increment():  
+            nonlocal count
+            count += 1  
+            return count
+
+            return increment
+
+        
+        counter = outer()   
+        print(counter())  
+        print(counter())  
+
+    Output:  
+    1  
+    2
+
+### 12. First-Class Functions:  
+    Python functions are objects. Therefore, functions can be:  
+
+    - Passed as Arguments  
+    - Assigned to names  
+    - Returned from functions  
+    - Used by other functions  
+    - Stored in data structures  
+
+    This is called first-class function support and this is directly connected to decorators.  
+
+    Why?  
+    A decorators needs to receive a function, potentially create a function and return a function, without first-class function it will be harder to implement.  
+
+### 13. Decorators:  
+    A decorator is a mechanism for extending or modifying the existing behaviour of the function without changing the function's core implementation.  
+
+    Mental Model:  
+    
+    Original function  
+            |  
+            V  
+        Decorator  
+            |  
+            V  
+    New / Modified callable  
+
+    The @decorator syntax is simply a convenient way of expressing function transformation or registration.  
+
+    Here, a function object is passed to a decorator and the resulting function object is bound to the decorator name.  
+
+### 14. Wrapper functions:  
+    A common decorator pattern creates a wrapper function around the original function.  
+    The wrapper can perform additional work before or after the original function call.  
+
+    Caller  
+       |
+       V  
+    Wrapper  
+       |  
+       V  
+    Original Function  
+       |  
+       V  
+    Result
+
+    The wrapper can therefore add behaviour without modifying the original function's implementation.  
+
+    Typical behaviour includes:  
+    - Logging  
+    - Timing  
+    - Authentication  
+    - Validation  
+    - Monitoring  
+    - Error Handling  
+    - Caching  
+
+
+
+
+
     
 
 

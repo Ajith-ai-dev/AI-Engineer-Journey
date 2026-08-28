@@ -261,7 +261,67 @@
     - Error Handling  
     - Caching  
 
+### 15. *args and **kwargs in Decorators:  
+    A decorator should ideally be reusable across functions with different signatures.  
 
+    A wrapper therefore commonly accepts:  
+
+    Variable positional arguments through *args  
+    Variable keyword arguments through **kwargs  
+
+    The wrapper can then forward those arguments to the original function.  
+
+    Engineering Insight  
+
+    This allows a generic decorator to work with many different APIs without knowing their exact signatures beforehand. This is an example of interface flexibility.  
+
+### 16. functools.wraps:  
+
+    A wrapper technically replaces the original function binding. This can cause metadata associated with the original function to become less visible.  
+
+    For example, the function's:  
+        - Name  
+        - Documentation  
+        - Other metadata  
+        can appear to belong to the wrapper instead.  
+    
+    functools.wraps helps preserve important metadata from the original function.  
+
+    Why?  
+    Because changing a function's behavior should not unnecessarily destroy information that developers, debugging tools, documentation systems, or frameworks may depend upon.
+
+### 17. Decorators and Frameworks:
+    Decorators are not just a Python convenience.  
+    
+    They are heavily used by frameworks.  
+    
+    For example, a web framework can associate a function with a route through a decorator.
+    
+    Conceptually:  
+    
+        Function  
+            ↓  
+        Decorator  
+            ↓  
+        Framework registration  
+            ↓  
+        Routing metadata  
+
+    The framework can then maintain a mapping between an external event and a Python function.  
+    
+    For an AI API, this might conceptually become:  
+
+        POST /predict  
+            ↓  
+        predict()  
+            ↓  
+        Preprocessing  
+            ↓  
+        Model inference  
+            ↓  
+        Response  
+
+    This is one reason understanding Python decorators is important before working deeply with AI frameworks.
 
 
 

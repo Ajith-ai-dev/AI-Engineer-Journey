@@ -323,7 +323,30 @@
 
     This is one reason understanding Python decorators is important before working deeply with AI frameworks.
 
+### 18. Decorators as Cross-Cutting Concerns:  
+    Some behavior applies to many functions but isn't the main responsibility of those      
+    functions.   
 
+    Examples:  
+        - Logging  
+        - Authentication  
+        - Monitoring  
+        - Timing  
+        - Tracing  
+        - Caching  
+        - Retry mechanisms  
+
+    Instead of duplicating that code in every function, a decorator can provide it consistently.  
+
+    Engineering Principle:  
+
+    Separate the core responsibility of a function from behavior that applies across many functions.
+
+    This improves:  
+        - Reusability  
+        - Maintainability  
+        - Consistency  
+        - Separation of concerns
 
     
 

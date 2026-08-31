@@ -347,8 +347,31 @@
         - Maintainability  
         - Consistency  
         - Separation of concerns
-
+### 19. try / finally in Monitoring:  
+    A monitoring decorator might use:  
     
+    try:  
+        result = function(*args, **kwargs)  
+        return result  
+    finally:  
+        record_metrics()  
+
+    Why finally?  
+
+    Because monitoring/cleanup may need to happen whether the function:  
+        - succeeds  
+        - raises an exception  
+        
+    This is important in production AI systems.  
+    
+    Even failed model requests consume:  
+        - Time
+        - CPU/GPU resources  
+        - Network resources  
+    
+    and should therefore be observable.
+
+
 
 
 
